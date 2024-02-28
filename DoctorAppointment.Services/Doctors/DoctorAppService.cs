@@ -20,11 +20,12 @@ public class DoctorAppService : DoctorService
 
     public async Task Add(AddDoctorDto dto)
     {
-        var doctor = new Doctor()
+        var doctor = new Doctor
         {
             FirstName = dto.FirstName,
             LastName = dto.LastName,
-            Field = dto.Field
+            Field = dto.Field,
+            NationalCode = dto.NationalCode
         };
 
         _repository.Add(doctor);
